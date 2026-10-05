@@ -1,0 +1,21 @@
+name = "running-bot"
+main = "src/index.ts"
+compatibility_date = "2026-09-01"
+
+# Workers Logs：在 Dashboard 可直接查看 console.error 輸出
+[observability]
+enabled = true
+
+# 建立 KV namespace 後把 id 填進來：
+#   wrangler kv namespace create STATE
+[[kv_namespaces]]
+binding = "STATE"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+# 非機密設定。機密請用 `wrangler secret put <NAME>`，見 README。
+[vars]
+STRAVA_ATHLETE_ID = ""        # 你的 Strava athlete id（用來驗證 owner_id）
+STRAVA_SUBSCRIPTION_ID = ""   # 建立 webhook 訂閱後回傳的 id（空字串 = 暫不驗證）
+GOOGLE_CALENDAR_ID = ""       # 專用「訓練」行事曆 ID
+TIMEZONE = "Asia/Taipei"
+LTHR = "170"                  # 乳酸閾值心率，用於計算 Z1–Z5

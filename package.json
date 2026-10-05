@@ -1,0 +1,21 @@
+{
+  "name": "running-bot",
+  "version": "0.4.0",
+  "private": true,
+  "description": "Garmin → Strava → Google Calendar 課表對照 → Discord 推播（Cloudflare Worker）",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run typecheck && npm test && wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261005.1",
+    "typescript": "^5.9.0",
+    "vitest": "^4.0.0",
+    "wrangler": "^4.147.0"
+  }
+}

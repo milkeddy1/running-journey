@@ -1,0 +1,8 @@
+# 複製成 .dev.vars 供 `wrangler dev` 使用（.dev.vars 已在 .gitignore）
+STRAVA_CLIENT_ID=
+STRAVA_CLIENT_SECRET=
+STRAVA_VERIFY_TOKEN=change-me
+GOOGLE_SA_EMAIL=xxx@yyy.iam.gserviceaccount.com
+# PEM 可整段貼上（含換行），或把換行寫成 \n 都可以
+GOOGLE_SA_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
+DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/...
